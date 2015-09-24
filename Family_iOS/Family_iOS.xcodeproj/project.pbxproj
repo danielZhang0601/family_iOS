@@ -13,6 +13,8 @@
 		7BC60DF41BB1A9B0003F82AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC60DF21BB1A9B0003F82AD /* Main.storyboard */; };
 		7BC60DF61BB1A9B0003F82AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC60DF51BB1A9B0003F82AD /* Assets.xcassets */; };
 		7BC60DF91BB1A9B0003F82AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC60DF71BB1A9B0003F82AD /* LaunchScreen.storyboard */; };
+		7BDC69E11BB4435000E64757 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDC69E01BB4435000E64757 /* SignInViewController.m */; };
+		7BDC69E41BB4490B00E64757 /* RjUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDC69E31BB4490B00E64757 /* RjUITextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		7BC60DF51BB1A9B0003F82AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BC60DF81BB1A9B0003F82AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BC60DFA1BB1A9B0003F82AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BDC69DF1BB4435000E64757 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		7BDC69E01BB4435000E64757 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		7BDC69E21BB4490B00E64757 /* RjUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RjUITextField.h; sourceTree = "<group>"; };
+		7BDC69E31BB4490B00E64757 /* RjUITextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RjUITextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,10 @@
 				7BC60DF71BB1A9B0003F82AD /* LaunchScreen.storyboard */,
 				7BC60DFA1BB1A9B0003F82AD /* Info.plist */,
 				7BC60DE91BB1A9B0003F82AD /* Supporting Files */,
+				7BDC69DF1BB4435000E64757 /* SignInViewController.h */,
+				7BDC69E01BB4435000E64757 /* SignInViewController.m */,
+				7BDC69E21BB4490B00E64757 /* RjUITextField.h */,
+				7BDC69E31BB4490B00E64757 /* RjUITextField.m */,
 			);
 			path = Family_iOS;
 			sourceTree = "<group>";
@@ -149,9 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BDC69E11BB4435000E64757 /* SignInViewController.m in Sources */,
 				7BC60DF11BB1A9B0003F82AD /* ViewController.m in Sources */,
 				7BC60DEE1BB1A9B0003F82AD /* AppDelegate.m in Sources */,
 				7BC60DEB1BB1A9B0003F82AD /* main.m in Sources */,
+				7BDC69E41BB4490B00E64757 /* RjUITextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +310,7 @@
 				7BC60DFF1BB1A9B0003F82AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
