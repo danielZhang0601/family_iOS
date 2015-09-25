@@ -1,24 +1,18 @@
 //
-//  SignInViewController.m
+//  MainTabController.m
 //  Family_iOS
 //
-//  Created by zhengyixiong on 15/9/24.
+//  Created by zhengyixiong on 15/9/25.
 //  Copyright © 2015年 zxd. All rights reserved.
 //
 
-#import "SignInViewController.h"
+#import "MainTabController.h"
 
-@interface SignInViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *accountTextField;
-@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-- (IBAction)signInBtnClick:(id)sender;
+@interface MainTabController ()
 
 @end
 
-@implementation SignInViewController
-
-@synthesize accountTextField;
-@synthesize passwordTextField;
+@implementation MainTabController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,8 +34,4 @@
 }
 */
 
-- (IBAction)signInBtnClick:(id)sender {
-    
-    [self performSegueWithIdentifier:@"tomain" sender:self];
-}
 @end

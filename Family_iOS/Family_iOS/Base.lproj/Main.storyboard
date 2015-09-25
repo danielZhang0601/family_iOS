@@ -71,7 +71,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="signInBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w0c-1E-IwN"/>
+                                    <action selector="signInBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a2L-9Z-eXj"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a5O-Fy-GrS">
@@ -120,7 +120,7 @@
                     <connections>
                         <outlet property="accountTextField" destination="Zgp-OJ-SfF" id="TjY-bE-gq0"/>
                         <outlet property="passwordTextField" destination="dbb-Xo-Unq" id="pYO-qo-BNR"/>
-                        <segue destination="7KR-OW-piJ" kind="show" identifier="toMain" id="rdh-Ad-2RL"/>
+                        <segue destination="7KR-OW-piJ" kind="presentation" identifier="tomain" id="N31-1T-H10"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -165,7 +165,7 @@
             </objects>
             <point key="canvasLocation" x="305" y="1056"/>
         </scene>
-        <!--Item-->
+        <!--More-->
         <scene sceneID="bm2-UP-pW1">
             <objects>
                 <viewController id="q0n-Pj-iiZ" sceneMemberID="viewController">
@@ -176,16 +176,28 @@
                     <view key="view" contentMode="scaleToFill" id="1lu-SP-ppu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c1t-rp-1hx">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="More Settings" id="FQf-tv-OgC"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="c1t-rp-1hx" secondAttribute="trailing" constant="-20" id="gAj-EQ-yVO"/>
+                            <constraint firstItem="c1t-rp-1hx" firstAttribute="leading" secondItem="1lu-SP-ppu" secondAttribute="leadingMargin" constant="-20" id="iSO-oL-70A"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="aPM-VR-vrn"/>
+                    <tabBarItem key="tabBarItem" title="More" id="aPM-VR-vrn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Fn-6m-dpP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="735" y="1056"/>
         </scene>
-        <!--Item 2-->
+        <!--Event-->
         <scene sceneID="hNI-EC-r4V">
             <objects>
                 <viewController id="UZK-U2-fem" sceneMemberID="viewController">
@@ -197,22 +209,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKw-D6-rEd">
-                                <rect key="frame" x="118" y="201" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pYW-3E-WrV">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Event List" id="Bds-8r-wvG"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pYW-3E-WrV" secondAttribute="trailing" constant="-20" id="DGI-Wv-7Jj"/>
+                            <constraint firstItem="pYW-3E-WrV" firstAttribute="leading" secondItem="iV3-0g-CTe" secondAttribute="leadingMargin" constant="-20" id="wKn-Jc-z6z"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="FRm-ai-Fa6"/>
+                    <tabBarItem key="tabBarItem" title="Event" id="FRm-ai-Fa6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWQ-Ej-XiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1172" y="680"/>
         </scene>
-        <!--Item 1-->
+        <!--Camera-->
         <scene sceneID="CCd-RE-5IR">
             <objects>
                 <viewController id="HfV-HY-GgB" sceneMemberID="viewController">
@@ -224,23 +240,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tyt-CE-o03">
-                                <rect key="frame" x="0.0" y="20" width="320" height="491"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8C8-2B-148">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Camera LIst" id="d50-zK-uW4"/>
+                                </items>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="8C8-2B-148" secondAttribute="trailing" constant="-20" id="93M-ov-ceo"/>
+                            <constraint firstItem="8C8-2B-148" firstAttribute="leading" secondItem="ZFP-wV-bqh" secondAttribute="leadingMargin" constant="-20" id="gGQ-mU-Y8A"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="PSJ-0W-yZJ"/>
+                    <tabBarItem key="tabBarItem" title="Camera" id="PSJ-0W-yZJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3P-We-goG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1172" y="-93"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Controller-->
         <scene sceneID="njT-We-KaT">
             <objects>
-                <tabBarController id="7KR-OW-piJ" sceneMemberID="viewController">
+                <tabBarController id="7KR-OW-piJ" customClass="MainTabController" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nye-Qk-sHo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
