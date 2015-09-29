@@ -12,8 +12,10 @@
 		7BC60DF41BB1A9B0003F82AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC60DF21BB1A9B0003F82AD /* Main.storyboard */; };
 		7BC60DF61BB1A9B0003F82AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC60DF51BB1A9B0003F82AD /* Assets.xcassets */; };
 		7BC60DF91BB1A9B0003F82AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC60DF71BB1A9B0003F82AD /* LaunchScreen.storyboard */; };
-		7BD85ED31BB59A9A00634627 /* MainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD85ED21BB59A9A00634627 /* MainTabController.m */; };
 		7BDC69E11BB4435000E64757 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDC69E01BB4435000E64757 /* SignInViewController.m */; };
+		A2FC3F341BBA7806009F9FC4 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC3F331BBA7806009F9FC4 /* SignUpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A2FC3F371BBA78BA009F9FC4 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC3F361BBA78BA009F9FC4 /* MainTabBarViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A2FC3F3A1BBA80BE009F9FC4 /* CameraListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC3F391BBA80BE009F9FC4 /* CameraListViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,10 +27,14 @@
 		7BC60DF51BB1A9B0003F82AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BC60DF81BB1A9B0003F82AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BC60DFA1BB1A9B0003F82AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BD85ED11BB59A9A00634627 /* MainTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabController.h; sourceTree = "<group>"; };
-		7BD85ED21BB59A9A00634627 /* MainTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabController.m; sourceTree = "<group>"; };
 		7BDC69DF1BB4435000E64757 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		7BDC69E01BB4435000E64757 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		A2FC3F321BBA7806009F9FC4 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		A2FC3F331BBA7806009F9FC4 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		A2FC3F351BBA78BA009F9FC4 /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
+		A2FC3F361BBA78BA009F9FC4 /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
+		A2FC3F381BBA80BE009F9FC4 /* CameraListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraListViewController.h; sourceTree = "<group>"; };
+		A2FC3F391BBA80BE009F9FC4 /* CameraListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 		7BC60DE81BB1A9B0003F82AD /* Family_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A2FC3F3B1BBA87BD009F9FC4 /* Controllers */,
 				7BC60DEC1BB1A9B0003F82AD /* AppDelegate.h */,
 				7BC60DED1BB1A9B0003F82AD /* AppDelegate.m */,
 				7BC60DF21BB1A9B0003F82AD /* Main.storyboard */,
@@ -68,10 +75,6 @@
 				7BC60DF71BB1A9B0003F82AD /* LaunchScreen.storyboard */,
 				7BC60DFA1BB1A9B0003F82AD /* Info.plist */,
 				7BC60DE91BB1A9B0003F82AD /* Supporting Files */,
-				7BDC69DF1BB4435000E64757 /* SignInViewController.h */,
-				7BDC69E01BB4435000E64757 /* SignInViewController.m */,
-				7BD85ED11BB59A9A00634627 /* MainTabController.h */,
-				7BD85ED21BB59A9A00634627 /* MainTabController.m */,
 			);
 			path = Family_iOS;
 			sourceTree = "<group>";
@@ -82,6 +85,37 @@
 				7BC60DEA1BB1A9B0003F82AD /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2FC3F3B1BBA87BD009F9FC4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2FC3F3D1BBA87DC009F9FC4 /* Main Tab */,
+				A2FC3F3C1BBA87CA009F9FC4 /* SignAccount */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A2FC3F3C1BBA87CA009F9FC4 /* SignAccount */ = {
+			isa = PBXGroup;
+			children = (
+				7BDC69DF1BB4435000E64757 /* SignInViewController.h */,
+				7BDC69E01BB4435000E64757 /* SignInViewController.m */,
+				A2FC3F321BBA7806009F9FC4 /* SignUpViewController.h */,
+				A2FC3F331BBA7806009F9FC4 /* SignUpViewController.m */,
+			);
+			name = SignAccount;
+			sourceTree = "<group>";
+		};
+		A2FC3F3D1BBA87DC009F9FC4 /* Main Tab */ = {
+			isa = PBXGroup;
+			children = (
+				A2FC3F351BBA78BA009F9FC4 /* MainTabBarViewController.h */,
+				A2FC3F361BBA78BA009F9FC4 /* MainTabBarViewController.m */,
+				A2FC3F381BBA80BE009F9FC4 /* CameraListViewController.h */,
+				A2FC3F391BBA80BE009F9FC4 /* CameraListViewController.m */,
+			);
+			name = "Main Tab";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD85ED31BB59A9A00634627 /* MainTabController.m in Sources */,
+				A2FC3F341BBA7806009F9FC4 /* SignUpViewController.m in Sources */,
 				7BDC69E11BB4435000E64757 /* SignInViewController.m in Sources */,
+				A2FC3F3A1BBA80BE009F9FC4 /* CameraListViewController.m in Sources */,
+				A2FC3F371BBA78BA009F9FC4 /* MainTabBarViewController.m in Sources */,
 				7BC60DEE1BB1A9B0003F82AD /* AppDelegate.m in Sources */,
 				7BC60DEB1BB1A9B0003F82AD /* main.m in Sources */,
 			);

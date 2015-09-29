@@ -38,11 +38,14 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+    self.title = @"Sign In";
     [self registerForNotifications];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
     [self unregisterForNotifications];
 }
 
@@ -124,7 +127,7 @@
     NSString *account = _accountTextField.text;
     NSString *password = _passwordTextField.text;
     NSLog(@"Account:%@,Password:%@",account,password);
-    [self performSegueWithIdentifier:@"tomain" sender:self];
+    [self performSegueWithIdentifier:@"toMain" sender:self];
 }
 
 //编辑框输入改变事件 限制账号输入框最大输入长度为11  手机号

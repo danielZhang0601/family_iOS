@@ -1,18 +1,18 @@
 //
-//  MainTabController.m
+//  SignUpViewController.m
 //  Family_iOS
 //
-//  Created by zhengyixiong on 15/9/25.
+//  Created by Daniel.Zhang on 15/9/29.
 //  Copyright © 2015年 zxd. All rights reserved.
 //
 
-#import "MainTabController.h"
+#import "SignUpViewController.h"
 
-@interface MainTabController ()
+@interface SignUpViewController ()
 
 @end
 
-@implementation MainTabController
+@implementation SignUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
