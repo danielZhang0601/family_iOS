@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TRk-vF-EWY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TRk-vF-EWY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
     </dependencies>
     <scenes>
         <!--Sign In View Controller-->
@@ -210,6 +210,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U2g-JA-Ood">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RKV-Hl-mUN">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RKV-Hl-mUN" id="hu5-2T-0AF">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -221,6 +231,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" id="9sC-Mu-Eq5" userLabel="Camera"/>
+                    <connections>
+                        <outlet property="cameraTableView" destination="U2g-JA-Ood" id="zge-nN-sPW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yns-QE-baf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -245,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="1155" y="346"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="dhw-lC-nat">
             <objects>
-                <viewController id="5au-PH-vUH" sceneMemberID="viewController">
+                <viewController id="5au-PH-vUH" customClass="SignUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FiF-Lu-rIe"/>
                         <viewControllerLayoutGuide type="bottom" id="iL7-3q-jNE"/>
@@ -266,10 +279,10 @@
             </objects>
             <point key="canvasLocation" x="247" y="1061"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot Password View Controller-->
         <scene sceneID="ypd-2l-Sgs">
             <objects>
-                <viewController id="aNz-We-3dC" sceneMemberID="viewController">
+                <viewController id="aNz-We-3dC" customClass="ForgotPasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wHg-ed-9so"/>
                         <viewControllerLayoutGuide type="bottom" id="JFE-ix-600"/>

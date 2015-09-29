@@ -9,6 +9,7 @@
 #import "CameraListViewController.h"
 
 @interface CameraListViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *cameraTableView;
 
 @end
 

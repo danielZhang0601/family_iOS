@@ -1,23 +1,23 @@
 //
-//  SignUpViewController.m
+//  ForgotPasswordViewController.m
 //  Family_iOS
 //
-//  Created by Daniel.Zhang on 15/9/29.
+//  Created by zhengyixiong on 15/9/29.
 //  Copyright © 2015年 zxd. All rights reserved.
 //
 
-#import "SignUpViewController.h"
+#import "ForgotPasswordViewController.h"
 
-@interface SignUpViewController ()
+@interface ForgotPasswordViewController ()
 
 @end
 
-@implementation SignUpViewController
+@implementation ForgotPasswordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Sign Up";
+    self.title = @"Forgot Password";
 }
 
 - (void)didReceiveMemoryWarning {
