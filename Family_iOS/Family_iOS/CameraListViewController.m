@@ -7,6 +7,7 @@
 //
 
 #import "CameraListViewController.h"
+#import "CameraListCell.h"
 
 @interface CameraListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *cameraTableView;
@@ -18,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.cameraTableView setDelegate:self];
+    [self.cameraTableView setDataSource:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,5 +37,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"CameraCell";
+    CameraListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    return cell;
+}
 
 @end

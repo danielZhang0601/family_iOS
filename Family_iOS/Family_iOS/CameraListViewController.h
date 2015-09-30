@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CameraListViewController : UIViewController
+@interface CameraListViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end

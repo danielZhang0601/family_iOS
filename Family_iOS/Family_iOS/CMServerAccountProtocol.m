@@ -13,7 +13,7 @@
 @implementation CMServerAccountProtocol
 
 + (void)test {
-    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:BASE_URL];
+//    NSURLRequest *request = [[NSURLRequest alloc]initWithURL:BASE_URL];
     
 }
 

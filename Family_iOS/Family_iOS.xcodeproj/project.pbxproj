@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B01FA261BBC2A4D00AF31A0 /* CameraListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01FA251BBC2A4D00AF31A0 /* CameraListCell.m */; };
 		7B40A9BA1BBABBFF002544DF /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B40A9B91BBABBFF002544DF /* ForgotPasswordViewController.m */; };
 		7B40A9BF1BBABF4B002544DF /* CameraObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B40A9BE1BBABF4B002544DF /* CameraObject.m */; };
 		7B40A9D41BBACD3A002544DF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B40A9C21BBACD3A002544DF /* AFHTTPRequestOperation.m */; };
@@ -39,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B01FA241BBC2A4D00AF31A0 /* CameraListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraListCell.h; sourceTree = "<group>"; };
+		7B01FA251BBC2A4D00AF31A0 /* CameraListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraListCell.m; sourceTree = "<group>"; };
 		7B40A9B81BBABBFF002544DF /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		7B40A9B91BBABBFF002544DF /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		7B40A9BD1BBABF4B002544DF /* CameraObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraObject.h; sourceTree = "<group>"; };
@@ -111,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B01FA231BBC2A1600AF31A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B01FA241BBC2A4D00AF31A0 /* CameraListCell.h */,
+				7B01FA251BBC2A4D00AF31A0 /* CameraListCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		7B40A9C01BBACD3A002544DF /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +220,7 @@
 		7BC60DE81BB1A9B0003F82AD /* Family_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				7B01FA231BBC2A1600AF31A0 /* View */,
 				7B40A9FC1BBAD43B002544DF /* RJ */,
 				7B40AA011BBADCF3002544DF /* Model */,
 				7B40AA001BBADCBC002544DF /* Vendor */,
@@ -350,6 +363,7 @@
 				7B40A9D61BBACD3A002544DF /* AFHTTPSessionManager.m in Sources */,
 				7B40A9F11BBACD44002544DF /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				7B40A9F01BBACD44002544DF /* AFNetworkActivityIndicatorManager.m in Sources */,
+				7B01FA261BBC2A4D00AF31A0 /* CameraListCell.m in Sources */,
 				A2FC3F3A1BBA80BE009F9FC4 /* CameraListViewController.m in Sources */,
 				A2FC3F371BBA78BA009F9FC4 /* MainTabBarViewController.m in Sources */,
 				7B40A9BA1BBABBFF002544DF /* ForgotPasswordViewController.m in Sources */,
