@@ -7,7 +7,7 @@
 //
 
 #import "SignInViewController.h"
-
+#import "CMServerAccountProtocol.h"
 @interface SignInViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *accountTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -29,6 +29,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [CMServerAccountProtocol testWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Response: %@", [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -127,7 +133,16 @@
     NSString *account = _accountTextField.text;
     NSString *password = _passwordTextField.text;
     NSLog(@"Account:%@,Password:%@",account,password);
-    [self performSegueWithIdentifier:@"toMain" sender:self];
+    [CMServerAccountProtocol loginByAccount:account Password:password VerifyCode:@"123456" WithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        if ([[responseObject objectForKey:@"code"] intValue] == 0) {
+            [self performSegueWithIdentifier:@"toMain" sender:self];
+        } else {
+            NSLog(@"Return:%@",responseObject);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+//    [self performSegueWithIdentifier:@"toMain" sender:self];
 }
 
 //编辑框输入改变事件 限制账号输入框最大输入长度为11  手机号

@@ -25,8 +25,4 @@
  */
 @property (nonatomic, copy) NSString *owner;
 
-- (instancetype)initWithDict: (NSDictionary *) dict;
-
-+ (instancetype)cameraObjectWithDict: (NSDictionary *) dict;
-
 @end
