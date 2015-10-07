@@ -8,6 +8,9 @@
 
 #import "SignInViewController.h"
 #import "CMServerAccountProtocol.h"
+#import "NSString+Utils.h"
+#import "MBProgressHUD.h"
+
 @interface SignInViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *accountTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -45,7 +48,6 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
-    self.title = @"Sign In";
     [self registerForNotifications];
 }
 
@@ -133,13 +135,35 @@
     NSString *account = _accountTextField.text;
     NSString *password = _passwordTextField.text;
     NSLog(@"Account:%@,Password:%@",account,password);
+    
+    //校验用户输入的用户名和密码是否正确
+    if ([account isEmptyOrNull]) {
+        NSLog(@"account null");
+        return;
+    } else if(![account checkIsMachesRegex:CELL_PHONE_REG]) {
+        NSLog(@"account not reg");
+        return;
+    } else if([password isEmptyOrNull]) {
+        NSLog(@"password null");
+        return;
+    } else if (![password checkIsMachesRegex:PASSWORD_REG]) {
+        NSLog(@"password not reg");
+        return;
+    }
+    
+    MBProgressHUD* HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    HUD.labelText = @"Login";
+    
     [CMServerAccountProtocol loginByAccount:account Password:password VerifyCode:@"123456" WithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [MBProgressHUD hideAllHUDsForView:self.view animated:NO];
+        // 返回值 code 为0 表示登陆成功 跳转到主界面
         if ([[responseObject objectForKey:@"code"] intValue] == 0) {
             [self performSegueWithIdentifier:@"toMain" sender:self];
         } else {
             NSLog(@"Return:%@",responseObject);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [MBProgressHUD hideAllHUDsForView:self.view animated:NO];
         NSLog(@"Error: %@", error);
     }];
 //    [self performSegueWithIdentifier:@"toMain" sender:self];
@@ -147,15 +171,16 @@
 
 //编辑框输入改变事件 限制账号输入框最大输入长度为11  手机号
 - (IBAction)accountEditChange:(UITextField *)sender {
-    if (sender.text.length > 11) {
-        sender.text = [sender.text substringToIndex:11];
+    if (sender.text.length > CELL_PHONE_LENGTH) {
+        sender.text = [sender.text substringToIndex:CELL_PHONE_LENGTH];
     }
 }
 
 //编辑框输入改变事件 限制密码输入框最大输入长度为20 密码正则校验 8-20位
 - (IBAction)passwordEditChange:(UITextField *)sender {
-    if (sender.text.length > 20) {
-        sender.text = [sender.text substringToIndex:20];
+    if (sender.text.length > PASSWORD_MAX_LENGTH) {
+        sender.text = [sender.text substringToIndex:PASSWORD_MAX_LENGTH];
     }
 }
+
 @end

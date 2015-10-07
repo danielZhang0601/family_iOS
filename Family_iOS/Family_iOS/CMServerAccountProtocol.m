@@ -7,10 +7,11 @@
 //
 
 #import "CMServerAccountProtocol.h"
-
+#import "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"
 
 //全局变量
 NSString *BASE_URL = @"http://120.25.250.154";
+//NSString *BASE_URL = @"http://192.168.8.106:8080";
 NSString *API_ACCOUNT;
 NSString *UTILS_HELLO;
 AFHTTPRequestOperationManager *manager;
@@ -22,11 +23,15 @@ AFHTTPRequestOperationManager *manager;
     UTILS_HELLO = [[NSString alloc]initWithFormat:@"%@/hello.html", BASE_URL];
     manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    // 超时时间
+    manager.requestSerializer.timeoutInterval = 5;
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/json",@"application/json",nil];
+    
 }
 
-
+// 禁用按钮输入框等控件，防止多次点击
+//+ (void)
 
 + (void)testWithSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                 failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
@@ -148,5 +153,7 @@ AFHTTPRequestOperationManager *manager;
     
     [manager POST:API_ACCOUNT parameters:parameters success:success failure:failure];
 }
+
+
 
 @end
