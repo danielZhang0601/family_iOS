@@ -8,7 +8,7 @@
 
 #import "SignUpViewController.h"
 #import "NSString+Utils.h"
-#import "MBProgressHUD.h"
+#import "MBProgressHUD+Add.h"
 #import "CMServerAccountProtocol.h"
 
 @interface SignUpViewController ()
@@ -84,6 +84,7 @@
     
     if ([account isEmptyOrNull]) {
         NSLog(@"account null");
+        [MBProgressHUD showText:@"account null" inView:self.view];
         return;
     } else if (![account checkIsMachesRegex:CELL_PHONE_REG]) {
         NSLog(@"account not match");

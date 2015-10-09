@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7B01FA261BBC2A4D00AF31A0 /* CameraListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01FA251BBC2A4D00AF31A0 /* CameraListCell.m */; };
+		7B27A1051BC7F61500C2D595 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27A1041BC7F61500C2D595 /* MBProgressHUD+Add.m */; settings = {ASSET_TAGS = (); }; };
+		7B27A10E1BC7FDEA00C2D595 /* RJCodeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27A10D1BC7FDEA00C2D595 /* RJCodeHandler.m */; settings = {ASSET_TAGS = (); }; };
 		7B40A9BA1BBABBFF002544DF /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B40A9B91BBABBFF002544DF /* ForgotPasswordViewController.m */; };
 		7B40A9BF1BBABF4B002544DF /* CameraObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B40A9BE1BBABF4B002544DF /* CameraObject.m */; };
 		7B40A9D41BBACD3A002544DF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B40A9C21BBACD3A002544DF /* AFHTTPRequestOperation.m */; };
@@ -46,6 +48,10 @@
 /* Begin PBXFileReference section */
 		7B01FA241BBC2A4D00AF31A0 /* CameraListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraListCell.h; sourceTree = "<group>"; };
 		7B01FA251BBC2A4D00AF31A0 /* CameraListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraListCell.m; sourceTree = "<group>"; };
+		7B27A1031BC7F61500C2D595 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MBProgressHUD+Add.h"; path = "MBProgressHUD/MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		7B27A1041BC7F61500C2D595 /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MBProgressHUD+Add.m"; path = "MBProgressHUD/MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		7B27A10C1BC7FDEA00C2D595 /* RJCodeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJCodeHandler.h; sourceTree = "<group>"; };
+		7B27A10D1BC7FDEA00C2D595 /* RJCodeHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJCodeHandler.m; sourceTree = "<group>"; };
 		7B40A9B81BBABBFF002544DF /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		7B40A9B91BBABBFF002544DF /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		7B40A9BD1BBABF4B002544DF /* CameraObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraObject.h; sourceTree = "<group>"; };
@@ -193,6 +199,8 @@
 			children = (
 				7B40A9FD1BBAD7FE002544DF /* CMServerAccountProtocol.h */,
 				7B40A9FE1BBAD7FE002544DF /* CMServerAccountProtocol.m */,
+				7B27A10C1BC7FDEA00C2D595 /* RJCodeHandler.h */,
+				7B27A10D1BC7FDEA00C2D595 /* RJCodeHandler.m */,
 			);
 			name = RJ;
 			sourceTree = "<group>";
@@ -300,6 +308,8 @@
 			children = (
 				F7420C1A1BC512570060A3CF /* MBProgressHUD.h */,
 				F7420C1B1BC512570060A3CF /* MBProgressHUD.m */,
+				7B27A1031BC7F61500C2D595 /* MBProgressHUD+Add.h */,
+				7B27A1041BC7F61500C2D595 /* MBProgressHUD+Add.m */,
 			);
 			name = MBProgressHUD;
 			sourceTree = "<group>";
@@ -390,6 +400,7 @@
 				7B40A9F51BBACD44002544DF /* UIProgressView+AFNetworking.m in Sources */,
 				7B40A9D41BBACD3A002544DF /* AFHTTPRequestOperation.m in Sources */,
 				F7420C1F1BC5142E0060A3CF /* ViewUtils.m in Sources */,
+				7B27A1051BC7F61500C2D595 /* MBProgressHUD+Add.m in Sources */,
 				7B40A9FF1BBAD7FE002544DF /* CMServerAccountProtocol.m in Sources */,
 				A2FC3F341BBA7806009F9FC4 /* SignUpViewController.m in Sources */,
 				F7420C1C1BC512570060A3CF /* MBProgressHUD.m in Sources */,
@@ -411,6 +422,7 @@
 				7BC60DEE1BB1A9B0003F82AD /* AppDelegate.m in Sources */,
 				7B40A9DA1BBACD3A002544DF /* AFURLRequestSerialization.m in Sources */,
 				7B40A9D71BBACD3A002544DF /* AFNetworkReachabilityManager.m in Sources */,
+				7B27A10E1BC7FDEA00C2D595 /* RJCodeHandler.m in Sources */,
 				7B40A9F71BBACD44002544DF /* UIWebView+AFNetworking.m in Sources */,
 				7B40A9DB1BBACD3A002544DF /* AFURLResponseSerialization.m in Sources */,
 				7BC60DEB1BB1A9B0003F82AD /* main.m in Sources */,

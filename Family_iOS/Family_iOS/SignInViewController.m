@@ -9,7 +9,8 @@
 #import "SignInViewController.h"
 #import "CMServerAccountProtocol.h"
 #import "NSString+Utils.h"
-#import "MBProgressHUD.h"
+#import "MBProgressHUD+Add.h"
+#import "RJCodeHandler.h"
 
 @interface SignInViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *accountTextField;
@@ -139,15 +140,19 @@
     //校验用户输入的用户名和密码是否正确
     if ([account isEmptyOrNull]) {
         NSLog(@"account null");
+        [MBProgressHUD showText:@"account null" inView:self.view];
         return;
     } else if(![account checkIsMachesRegex:CELL_PHONE_REG]) {
         NSLog(@"account not reg");
+        [MBProgressHUD showText:@"account not reg" inView:self.view];
         return;
     } else if([password isEmptyOrNull]) {
         NSLog(@"password null");
+        [MBProgressHUD showText:@"password null" inView:self.view];
         return;
     } else if (![password checkIsMachesRegex:PASSWORD_REG]) {
         NSLog(@"password not reg");
+        [MBProgressHUD showText:@"password not reg" inView:self.view];
         return;
     }
     
@@ -161,6 +166,7 @@
             [self performSegueWithIdentifier:@"toMain" sender:self];
         } else {
             NSLog(@"Return:%@",responseObject);
+            [MBProgressHUD showText:[RJCodeHandler handleCode:[[responseObject objectForKey:@"code"] intValue]] inView:self.view];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [MBProgressHUD hideAllHUDsForView:self.view animated:NO];
