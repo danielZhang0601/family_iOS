@@ -10,4 +10,8 @@
 
 @interface AccountObject : NSObject
 
+@property (nonatomic, copy)NSString *account;
+@property (nonatomic, copy)NSString *password;
+
+
 @end

@@ -358,7 +358,7 @@
                                         <constraint firstAttribute="height" constant="46" id="4F5-or-eKM"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                    <state key="normal" title="Button">
+                                    <state key="normal" title="Sign Out">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>

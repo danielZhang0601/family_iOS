@@ -11,6 +11,7 @@
 #import "NSString+Utils.h"
 #import "MBProgressHUD+Add.h"
 #import "RJCodeHandler.h"
+#import "AppDelegate.h"
 
 @interface SignInViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *accountTextField;
@@ -166,6 +167,10 @@
         [MBProgressHUD hideAllHUDsForView:self.view animated:NO];
         // 返回值 code 为0 表示登陆成功 跳转到主界面
         if ([[responseObject objectForKey:@"code"] intValue] == 0) {
+            AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+            appDelegate.accountObject.account = account;
+            appDelegate.accountObject.password = password;
+            self.passwordTextField.text = @"";
             [self performSegueWithIdentifier:@"toMain" sender:self];
         } else {
             NSLog(@"Return:%@",responseObject);
@@ -175,7 +180,6 @@
         [MBProgressHUD hideAllHUDsForView:self.view animated:NO];
         NSLog(@"Error: %@", error);
     }];
-//    [self performSegueWithIdentifier:@"toMain" sender:self];
 }
 
 //编辑框输入改变事件 限制账号输入框最大输入长度为11  手机号

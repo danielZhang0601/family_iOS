@@ -27,7 +27,13 @@
 }
 
 - (IBAction)logOutBtnClick:(UIButton *)sender {
-//    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-//    CMServerAccountProtocol logoutByAccount:<#(NSString *)#> WithSuccess:<#^(AFHTTPRequestOperation *operation, id responseObject)success#> failure:<#^(AFHTTPRequestOperation *operation, NSError *error)failure#>
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [CMServerAccountProtocol logoutByAccount:appDelegate.accountObject.account WithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Logout success");
+        [self.navigationController popViewControllerAnimated:YES];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Logout fail,but still close");
+//        [self performSegueWithIdentifier:@"toSignIn" sender:self];
+    }];
 }
 @end
