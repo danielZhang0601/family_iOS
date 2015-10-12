@@ -7,11 +7,27 @@
 //
 
 #import "MoreTableViewController.h"
+#import "CMServerAccountProtocol.h"
+#import "AppDelegate.h"
 
 @implementation MoreTableViewController
 
 - (void)viewDidLoad {
-    
+    [self.tableView setDelegate:self];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        [self performSegueWithIdentifier:@"toModifyPassword" sender:self];
+    } else if (indexPath.row == 1) {
+        
+    } else if (indexPath.row == 2) {
+        [self performSegueWithIdentifier:@"toHelp" sender:self];
+    }
+}
+
+- (IBAction)logOutBtnClick:(UIButton *)sender {
+//    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+//    CMServerAccountProtocol logoutByAccount:<#(NSString *)#> WithSuccess:<#^(AFHTTPRequestOperation *operation, id responseObject)success#> failure:<#^(AFHTTPRequestOperation *operation, NSError *error)failure#>
+}
 @end

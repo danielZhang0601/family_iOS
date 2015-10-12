@@ -50,6 +50,13 @@ AFHTTPRequestOperationManager *manager;
     [manager POST:API_ACCOUNT parameters:parameters success:success failure:failure];
 }
 
++ (void)logoutByAccount:(NSString *)account WithSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+                failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    NSDictionary *parameters = @{@"cmd":@"logout",@"data":@{@"account":account}};
+    
+    [manager POST:API_ACCOUNT parameters:parameters success:success failure:failure];
+}
+
 + (void)request_register_smsByCellPhone:(NSString *)cellphone
                             WithSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                 failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
@@ -62,14 +69,6 @@ AFHTTPRequestOperationManager *manager;
                   WithSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                       failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     NSDictionary *parameters = @{@"cmd":@"sms_register",@"data":@{@"account":account,@"password":password,@"sms_code":smsCode}};
-    
-    [manager POST:API_ACCOUNT parameters:parameters success:success failure:failure];
-}
-
-+ (void)logoutByAccount:(NSString *)account
-            WithSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
-    NSDictionary *parameters = @{@"cmd":@"logout",@"data":@{@"account":account}};
     
     [manager POST:API_ACCOUNT parameters:parameters success:success failure:failure];
 }

@@ -17,20 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.hidesBackButton = YES;
+    [self setDelegate:self];
     self.title = @"Camera List";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    self.navigationItem.hidesBackButton = YES;
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    self.navigationItem.hidesBackButton = NO;
 }
 
 /*
@@ -42,5 +36,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    if (viewController == self.viewControllers[0]) {
+        self.title = @"Camera List";
+    } else if (viewController == self.viewControllers[1]) {
+        self.title = @"Event List";
+    } else if (viewController == self.viewControllers[2]) {
+        self.title = @"More Settings";
+    }
+}
 
 @end

@@ -273,9 +273,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="STg-GG-mSh" kind="relationship" relationship="viewControllers" id="mPX-in-PR8"/>
-                        <segue destination="cP8-zK-3vQ" kind="relationship" relationship="viewControllers" id="IHC-TY-yi2"/>
-                        <segue destination="gEQ-kf-TYX" kind="relationship" relationship="viewControllers" id="Xfi-Kx-Xiy"/>
+                        <segue destination="STg-GG-mSh" kind="relationship" relationship="viewControllers" id="qFO-vc-Uuf"/>
+                        <segue destination="cP8-zK-3vQ" kind="relationship" relationship="viewControllers" id="9ea-Tf-Vxm"/>
+                        <segue destination="gEQ-kf-TYX" kind="relationship" relationship="viewControllers" id="IbB-di-xND"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTg-qI-3wK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -366,6 +366,9 @@
                                             <integer key="value" value="5"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="logOutBtnClick:" destination="gEQ-kf-TYX" eventType="touchUpInside" id="C9l-tZ-JjO"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -447,8 +450,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="moreTableView" destination="xcg-Z9-Cqp" id="Ux9-2q-fXm"/>
-                        <segue destination="8UA-1u-mme" kind="show" id="lRj-Xv-d7N"/>
-                        <segue destination="y3l-u5-GnZ" kind="show" id="ZTZ-2P-rjU"/>
+                        <segue destination="8UA-1u-mme" kind="show" identifier="toModifyPassword" id="lRj-Xv-d7N"/>
+                        <segue destination="y3l-u5-GnZ" kind="show" identifier="toHelp" id="ZTZ-2P-rjU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4x-kL-VPL" userLabel="First Responder" sceneMemberID="firstResponder"/>

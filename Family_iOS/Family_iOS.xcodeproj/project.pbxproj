@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B013BD41BCBFF8F0015868A /* AccountObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B013BD31BCBFF8F0015868A /* AccountObject.m */; settings = {ASSET_TAGS = (); }; };
 		7B01FA261BBC2A4D00AF31A0 /* CameraListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01FA251BBC2A4D00AF31A0 /* CameraListCell.m */; };
 		7B27A1051BC7F61500C2D595 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27A1041BC7F61500C2D595 /* MBProgressHUD+Add.m */; settings = {ASSET_TAGS = (); }; };
 		7B27A10E1BC7FDEA00C2D595 /* RJCodeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27A10D1BC7FDEA00C2D595 /* RJCodeHandler.m */; settings = {ASSET_TAGS = (); }; };
@@ -46,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B013BD21BCBFF8E0015868A /* AccountObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountObject.h; sourceTree = "<group>"; };
+		7B013BD31BCBFF8F0015868A /* AccountObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountObject.m; sourceTree = "<group>"; };
 		7B01FA241BBC2A4D00AF31A0 /* CameraListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraListCell.h; sourceTree = "<group>"; };
 		7B01FA251BBC2A4D00AF31A0 /* CameraListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraListCell.m; sourceTree = "<group>"; };
 		7B27A1031BC7F61500C2D595 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MBProgressHUD+Add.h"; path = "MBProgressHUD/MBProgressHUD+Add.h"; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 			children = (
 				7B40A9BD1BBABF4B002544DF /* CameraObject.h */,
 				7B40A9BE1BBABF4B002544DF /* CameraObject.m */,
+				7B013BD21BCBFF8E0015868A /* AccountObject.h */,
+				7B013BD31BCBFF8F0015868A /* AccountObject.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 			files = (
 				7B40A9DC1BBACD3A002544DF /* AFURLSessionManager.m in Sources */,
 				7B40A9D91BBACD3A002544DF /* AFURLConnectionOperation.m in Sources */,
+				7B013BD41BCBFF8F0015868A /* AccountObject.m in Sources */,
 				7B40A9F61BBACD44002544DF /* UIRefreshControl+AFNetworking.m in Sources */,
 				7B40A9F31BBACD44002544DF /* UIButton+AFNetworking.m in Sources */,
 				7B40A9F51BBACD44002544DF /* UIProgressView+AFNetworking.m in Sources */,
