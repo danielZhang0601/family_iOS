@@ -52,7 +52,7 @@ private:
     int             m_bDataRun;
     int             m_bBroadcastRun;
     
-    std::list<discov_dev_t *> m_devList;
+//    std::list<discov_dev_t *> m_devList;
     sys_mutex_t *m_pDevLock;
 };
 

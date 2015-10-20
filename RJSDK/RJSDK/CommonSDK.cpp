@@ -95,7 +95,7 @@ bool CommonSDK::Start()
     }
     
     m_pDevLock = sys_mutex_create();
-    if (NULL != m_pDevLock)
+    if (NULL == m_pDevLock)
     {
         goto ST_SDK_ERROR;
     }
@@ -204,6 +204,7 @@ void CommonSDK::DataThreadRun()
 
 void CommonSDK::BroadcastThreadRun()
 {
+    /*
     rj_queue_h devList = rj_queue_create();
     discov_dev_t *pDev = NULL;
     std::list<discov_dev_t *>::iterator iter;
@@ -241,6 +242,7 @@ void CommonSDK::BroadcastThreadRun()
     }
     
     rj_queue_destroy(devList);
+     */
 }
 
 int CommonSDK::GetDevNetStatus(char *pSN)
@@ -259,6 +261,7 @@ int CommonSDK::GetLocalDev(char *buff,int bufLen)
     
     int ret = 0;
     cJSON *pRoot = cJSON_CreateArray();
+    /*
     for (std::list<discov_dev_t *>::iterator iter = m_devList.begin(); iter != m_devList.end(); iter++)
     {
         cJSON *pItem = cJSON_CreateObject();
@@ -286,6 +289,6 @@ int CommonSDK::GetLocalDev(char *buff,int bufLen)
     cJSON_Delete(pRoot);
     
     sys_mutex_unlock(m_pDevLock);
-    
+    */
     return ret;
 }

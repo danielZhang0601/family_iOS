@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "AccountObject.h"
+#include "RJSDKManger.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) AccountObject *accountObject;
+@property (strong, nonatomic) RJSDKManger *localSDKManager;
 
 @end
 

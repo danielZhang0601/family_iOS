@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-#import "CommonSDK.h"
-
 @interface RJSDKManger : NSObject
 
-+ (RJSDKManger *)SharedManager;
++ (RJSDKManger *)sharedManager;
+
+- (BOOL)startSDKServer;
+
+- (void)stopSDKServer;
 
 @end

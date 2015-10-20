@@ -7,12 +7,13 @@
 //
 
 #import "RJSDKManger.h"
+#include "CommonSDK.h"
 
 @implementation RJSDKManger{
     CommonSDK *commonSDK;
 }
 
-+ (RJSDKManger *)SharedManager
++ (RJSDKManger *)sharedManager
 {
     static RJSDKManger* sharedManager = nil;
     static dispatch_once_t onceToken;
@@ -27,6 +28,14 @@
         commonSDK = new CommonSDK();
     }
     return self;
+}
+
+- (BOOL)startSDKServer {
+    return commonSDK->Start();
+}
+
+- (void)stopSDKServer {
+    return commonSDK->Stop();
 }
 
 @end

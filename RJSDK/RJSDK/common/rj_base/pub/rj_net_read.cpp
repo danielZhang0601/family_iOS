@@ -6,14 +6,14 @@
 #include <assert.h>
 
 ///	@struct rj_net_read_t
-///	@brief  ����д�����ڴ�飨�ⲿʹ�ã�
+///	@brief  ”√”⁄–¥µƒ¡˜ƒ⁄¥ÊøÈ£®Õ‚≤ø π”√£©
 typedef struct rj_net_read_t
 {
     uint16          resv;
     uint16          ws;
-    uint32          pos;                ///< ��ǰλ��
+    uint32          pos;                ///< µ±«∞Œª÷√
 
-    _RJ_MEM_BLOCK_ *p_block;            ///< �ڴ����Ϣ    
+    _RJ_MEM_BLOCK_ *p_block;            ///< ƒ⁄¥ÊøÈ–≈œ¢    
 }rj_net_read_t;
 
 RJ_API rj_net_r_h rj_net_read_create(_RJ_MEM_BLOCK_ *p_block, int ws)
@@ -65,18 +65,18 @@ RJ_API uint32 rj_net_read_pop(rj_net_r_h handle, char **pp_data)
     {
         assert (p_net_r->pos <= p_net_r->p_block->data_len);
 
-        //�����������㣬���ʾ�����Ѿ�����ȡ�꣬�޿���ȡ�����ݡ�
+        //»ÙÃıº˛≤ª¬˙◊„£¨‘Ú±Ì æ ˝æ›“—æ≠±ªÃ·»°ÕÍ£¨Œﬁø…Ã·»°µƒ ˝æ›°£
         if (p_net_r->pos < p_net_r->p_block->data_len)
         {
             int ws_head_len = 0;
             if (p_net_r->ws)
                 ws_head_len = sizeof(rn_ws_packet_t);
 
-            //ȡ��ͷ��Ϣ�����ݰڷ�Ϊ��rn_ws_packet_t + rj_ndp_head_t + data������(rj_ndp_head_t + data��
+            //»°µ√Õ∑–≈œ¢£¨ ˝æ›∞⁄∑≈Œ™£®rn_ws_packet_t + rj_ndp_head_t + data£©ªÚ’ﬂ(rj_ndp_head_t + data£©
             rj_ndp_pk_t *p_head = (rj_ndp_pk_t *)(p_net_r->p_block->p_buf + p_net_r->pos + ws_head_len);
             *pp_data    = p_net_r->p_block->p_buf + p_net_r->pos;
 
-            //ƫ�ƿ�ʼλ�ã���ֹ�ظ���ȡ
+            //∆´“∆ø™ ºŒª÷√£¨∑¿÷π÷ÿ∏¥Ã·»°
             uint32  data_len = ws_head_len + sizeof(rj_ndp_pk_t) + p_head->pk_len;
             p_net_r->pos += data_len;
             assert (p_net_r->pos <= p_net_r->p_block->data_len);
