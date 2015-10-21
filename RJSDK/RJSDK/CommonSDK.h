@@ -27,9 +27,9 @@ public:
     bool Start();
     void Stop();
     
-    int GetDevNetStatus(char *pSN);
+    int GetDevNetStatus(const char *pSN);
     
-    void AddDevToSDK(char *buff,int bufLen);
+    void AddDevToSDK(const char *buff,int bufLen);
     int GetLocalDev(char *buff,int bufLen);
     
 public:
@@ -52,7 +52,7 @@ private:
     int             m_bDataRun;
     int             m_bBroadcastRun;
     
-//    std::list<discov_dev_t *> m_devList;
+    std::list<discov_dev_t *> m_devList;
     sys_mutex_t *m_pDevLock;
 };
 

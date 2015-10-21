@@ -16,4 +16,10 @@
 
 - (void)stopSDKServer;
 
+- (void)addDevice:(NSString *) deviceList;
+
+- (NSString *)getLocalDevicesList;
+
+- (int)getDeviceStatus:(NSString *) deviceSN;
+
 @end

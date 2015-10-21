@@ -155,6 +155,34 @@
             </objects>
             <point key="canvasLocation" x="692" y="346"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="yEA-Wr-si4">
+            <objects>
+                <tableViewController id="hYu-ij-Py3" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8Wt-BQ-cre">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hei-jw-AtT">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hei-jw-AtT" id="eC3-Bk-E9a">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hYu-ij-Py3" id="Uxn-c1-ofk"/>
+                            <outlet property="delegate" destination="hYu-ij-Py3" id="ZCq-eg-y9S"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3h-Xj-fLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2105" y="-990"/>
+        </scene>
         <!--Camera List-->
         <scene sceneID="DTc-Hc-wZ3">
             <objects>
@@ -208,6 +236,7 @@
                     <connections>
                         <outlet property="cameraTableView" destination="FlA-jl-apr" id="ZEr-dF-a39"/>
                         <segue destination="kpw-D2-Iuw" kind="show" id="2S4-mY-Cdc"/>
+                        <segue destination="hYu-ij-Py3" kind="show" identifier="toLocalCameraList" id="H7m-AN-GXx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b00-v9-8lu" userLabel="First Responder" sceneMemberID="firstResponder"/>
