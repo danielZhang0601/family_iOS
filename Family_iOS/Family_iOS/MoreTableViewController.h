@@ -9,7 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MoreTableViewController : UITableViewController
-@property (strong, nonatomic) IBOutlet UITableView *moreTableView;
-- (IBAction)logOutBtnClick:(UIButton *)sender;
 
 @end

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7B013BD41BCBFF8F0015868A /* AccountObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B013BD31BCBFF8F0015868A /* AccountObject.m */; settings = {ASSET_TAGS = (); }; };
+		7B0171B01BD91AB00068BB2C /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0171AF1BD91AB00068BB2C /* EventTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		7B0171B31BD91E6A0068BB2C /* LocalCameraTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0171B21BD91E6A0068BB2C /* LocalCameraTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		7B01FA261BBC2A4D00AF31A0 /* CameraListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B01FA251BBC2A4D00AF31A0 /* CameraListCell.m */; };
 		7B27A1051BC7F61500C2D595 /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B27A1041BC7F61500C2D595 /* MBProgressHUD+Add.m */; settings = {ASSET_TAGS = (); }; };
 		7B40A9BA1BBABBFF002544DF /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B40A9B91BBABBFF002544DF /* ForgotPasswordViewController.m */; };
@@ -40,7 +42,7 @@
 		7BEFE2E71BD6891B00D36FD1 /* libRJSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BEFE2E11BD686DF00D36FD1 /* libRJSDK.a */; };
 		A2FC3F341BBA7806009F9FC4 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC3F331BBA7806009F9FC4 /* SignUpViewController.m */; };
 		A2FC3F371BBA78BA009F9FC4 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC3F361BBA78BA009F9FC4 /* MainTabBarViewController.m */; };
-		A2FC3F3A1BBA80BE009F9FC4 /* CameraListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC3F391BBA80BE009F9FC4 /* CameraListViewController.m */; };
+		A2FC3F3A1BBA80BE009F9FC4 /* CameraTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FC3F391BBA80BE009F9FC4 /* CameraTableViewController.m */; };
 		F7420C1C1BC512570060A3CF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F7420C1B1BC512570060A3CF /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		F7420C1F1BC5142E0060A3CF /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7420C1E1BC5142E0060A3CF /* ViewUtils.m */; settings = {ASSET_TAGS = (); }; };
 		F7420C231BC51D530060A3CF /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7420C221BC51D530060A3CF /* NSString+Utils.m */; settings = {ASSET_TAGS = (); }; };
@@ -67,6 +69,10 @@
 /* Begin PBXFileReference section */
 		7B013BD21BCBFF8E0015868A /* AccountObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountObject.h; sourceTree = "<group>"; };
 		7B013BD31BCBFF8F0015868A /* AccountObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountObject.m; sourceTree = "<group>"; };
+		7B0171AE1BD91AB00068BB2C /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
+		7B0171AF1BD91AB00068BB2C /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
+		7B0171B11BD91E6A0068BB2C /* LocalCameraTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalCameraTableViewController.h; sourceTree = "<group>"; };
+		7B0171B21BD91E6A0068BB2C /* LocalCameraTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalCameraTableViewController.m; sourceTree = "<group>"; };
 		7B01FA241BBC2A4D00AF31A0 /* CameraListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraListCell.h; sourceTree = "<group>"; };
 		7B01FA251BBC2A4D00AF31A0 /* CameraListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraListCell.m; sourceTree = "<group>"; };
 		7B27A1031BC7F61500C2D595 /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MBProgressHUD+Add.h"; path = "MBProgressHUD/MBProgressHUD+Add.h"; sourceTree = "<group>"; };
@@ -131,8 +137,8 @@
 		A2FC3F331BBA7806009F9FC4 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		A2FC3F351BBA78BA009F9FC4 /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
 		A2FC3F361BBA78BA009F9FC4 /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
-		A2FC3F381BBA80BE009F9FC4 /* CameraListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraListViewController.h; sourceTree = "<group>"; };
-		A2FC3F391BBA80BE009F9FC4 /* CameraListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraListViewController.m; sourceTree = "<group>"; };
+		A2FC3F381BBA80BE009F9FC4 /* CameraTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraTableViewController.h; sourceTree = "<group>"; };
+		A2FC3F391BBA80BE009F9FC4 /* CameraTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraTableViewController.m; sourceTree = "<group>"; };
 		F7420C1A1BC512570060A3CF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
 		F7420C1B1BC512570060A3CF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 		F7420C1D1BC5142E0060A3CF /* ViewUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtils.h; sourceTree = "<group>"; };
@@ -329,10 +335,14 @@
 			children = (
 				A2FC3F351BBA78BA009F9FC4 /* MainTabBarViewController.h */,
 				A2FC3F361BBA78BA009F9FC4 /* MainTabBarViewController.m */,
-				A2FC3F381BBA80BE009F9FC4 /* CameraListViewController.h */,
-				A2FC3F391BBA80BE009F9FC4 /* CameraListViewController.m */,
+				A2FC3F381BBA80BE009F9FC4 /* CameraTableViewController.h */,
+				A2FC3F391BBA80BE009F9FC4 /* CameraTableViewController.m */,
 				F7C7D97B1BC4AD9C0026A20B /* MoreTableViewController.h */,
 				F7C7D97C1BC4AD9C0026A20B /* MoreTableViewController.m */,
+				7B0171AE1BD91AB00068BB2C /* EventTableViewController.h */,
+				7B0171AF1BD91AB00068BB2C /* EventTableViewController.m */,
+				7B0171B11BD91E6A0068BB2C /* LocalCameraTableViewController.h */,
+				7B0171B21BD91E6A0068BB2C /* LocalCameraTableViewController.m */,
 			);
 			name = "Main Tab";
 			sourceTree = "<group>";
@@ -455,6 +465,7 @@
 				7B27A1051BC7F61500C2D595 /* MBProgressHUD+Add.m in Sources */,
 				A2FC3F341BBA7806009F9FC4 /* SignUpViewController.m in Sources */,
 				F7420C1C1BC512570060A3CF /* MBProgressHUD.m in Sources */,
+				7B0171B01BD91AB00068BB2C /* EventTableViewController.m in Sources */,
 				7BEFE2121BD680B800D36FD1 /* CMServerAccountProtocol.m in Sources */,
 				7B40A9F21BBACD44002544DF /* UIAlertView+AFNetworking.m in Sources */,
 				F7420C231BC51D530060A3CF /* NSString+Utils.m in Sources */,
@@ -468,13 +479,14 @@
 				7BEFE2151BD680D300D36FD1 /* RJCodeHandler.m in Sources */,
 				7B40A9F01BBACD44002544DF /* AFNetworkActivityIndicatorManager.m in Sources */,
 				7B01FA261BBC2A4D00AF31A0 /* CameraListCell.m in Sources */,
-				A2FC3F3A1BBA80BE009F9FC4 /* CameraListViewController.m in Sources */,
+				A2FC3F3A1BBA80BE009F9FC4 /* CameraTableViewController.m in Sources */,
 				A2FC3F371BBA78BA009F9FC4 /* MainTabBarViewController.m in Sources */,
 				7B40A9BA1BBABBFF002544DF /* ForgotPasswordViewController.m in Sources */,
 				7B40A9D81BBACD3A002544DF /* AFSecurityPolicy.m in Sources */,
 				7BC60DEE1BB1A9B0003F82AD /* AppDelegate.m in Sources */,
 				7B40A9DA1BBACD3A002544DF /* AFURLRequestSerialization.m in Sources */,
 				7B40A9D71BBACD3A002544DF /* AFNetworkReachabilityManager.m in Sources */,
+				7B0171B31BD91E6A0068BB2C /* LocalCameraTableViewController.m in Sources */,
 				7B40A9F71BBACD44002544DF /* UIWebView+AFNetworking.m in Sources */,
 				7B40A9DB1BBACD3A002544DF /* AFURLResponseSerialization.m in Sources */,
 				7BC60DEB1BB1A9B0003F82AD /* main.m in Sources */,

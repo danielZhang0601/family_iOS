@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MainTabBarViewController : UITabBarController<UITabBarControllerDelegate>
-- (void)toAddCameraView;
+
 @end

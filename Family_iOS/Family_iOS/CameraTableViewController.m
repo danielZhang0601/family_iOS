@@ -6,21 +6,33 @@
 //  Copyright © 2015年 zxd. All rights reserved.
 //
 
-#import "CameraListViewController.h"
+#import "CameraTableViewController.h"
 #import "CameraListCell.h"
 
-@interface CameraListViewController ()
+@interface CameraTableViewController ()
+
 @property (weak, nonatomic) IBOutlet UITableView *cameraTableView;
 
 @end
 
-@implementation CameraListViewController
+@implementation CameraTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.cameraTableView setDelegate:self];
-    [self.cameraTableView setDataSource:self];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.tabBarController.title = @"Camera List";
+    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(toLocalCameraList)];
+}
+
+- (void)toLocalCameraList {
+    [self performSegueWithIdentifier:@"toLocalCameraList" sender:self];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    self.tabBarController.navigationItem.rightBarButtonItem = nil;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +57,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"CameraCell";
     CameraListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
     return cell;
 }
 

@@ -19,7 +19,6 @@
     // Do any additional setup after loading the view.
     self.navigationItem.hidesBackButton = YES;
     [self setDelegate:self];
-    self.title = @"Camera List";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,23 +35,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (void)toAddCameraView {
-    [self performSegueWithIdentifier:@"toAddCamera" sender:self];
-}
-
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-    if (viewController == self.viewControllers[0]) {
-        self.title = @"Camera List";
-        UIBarButtonItem *addCameraBtn = [[UIBarButtonItem alloc]initWithTitle:@"+" style:UIBarButtonSystemItemAdd target:self action:@selector(toAddCameraView)];
-        self.navigationItem.rightBarButtonItem = addCameraBtn;
-    } else if (viewController == self.viewControllers[1]) {
-        self.title = @"Event List";
-        self.navigationItem.rightBarButtonItem = nil;
-    } else if (viewController == self.viewControllers[2]) {
-        self.title = @"More Settings";
-        self.navigationItem.rightBarButtonItem = nil;
-    }
-}
 
 @end

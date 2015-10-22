@@ -10,10 +10,22 @@
 #import "CMServerAccountProtocol.h"
 #import "AppDelegate.h"
 
+@interface MoreTableViewController()
+
+@property (strong, nonatomic) IBOutlet UITableView *moreTableView;
+
+- (IBAction)logOutBtnClick:(UIButton *)sender;
+
+@end
+
 @implementation MoreTableViewController
 
 - (void)viewDidLoad {
     [self.tableView setDelegate:self];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.tabBarController.title = @"More Settings";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {

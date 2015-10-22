@@ -141,6 +141,10 @@
     NSString *password = _passwordTextField.text;
     NSLog(@"Account:%@,Password:%@",account,password);
     
+    //debug
+    [self performSegueWithIdentifier:@"toMain" sender:self];
+    return;
+    
     //校验用户输入的用户名和密码是否正确
     if ([account isEmptyOrNull]) {
         NSLog(@"account null");
